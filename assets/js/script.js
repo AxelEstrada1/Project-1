@@ -1,14 +1,25 @@
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0a79f5410788bbe883c406a19675")
-    .then(response => response.json())
-    .then(citiesFound => {
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '37f0117021msh3bf81e73c9ea30ap12d251jsn858668b3e15e',
+		'X-RapidAPI-Host': 'planets-info-by-newbapi.p.rapidapi.com'
+	}
+};
 
-        console.log(citiesFound);
-        let firstCity = citiesFound[0];
-        console.log(firstCity)
-        console.log(firstCity.lat);
-        console.log(firstCity.lon);
-        //let latEl = firstCity.lat;
-        //let latEl = firstCity.lon'
+fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
-        return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=4d1c0a79f5410788bbe883c406a19675`)
-    })
+    const option = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '37f0117021msh3bf81e73c9ea30ap12d251jsn858668b3e15e',
+            'X-RapidAPI-Host': 'astronomy.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://astronomy.p.rapidapi.com/api/v2/bodies/positions?latitude=33.775867&longitude=-84.39733&from_date=2017-12-20&to_date=2017-12-21&elevation=166&time=12%3A00%3A00', option)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
