@@ -30,9 +30,63 @@ main {
 
 aside {
     flex: 30%;
-    background-color: #b9c6ae;
+    background-image: url(https://t4.ftcdn.net/jpg/02/43/75/73/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg);
     padding: 20px;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+aside h2 {
+    text-align: center;
+    color: white;
+}
+
+aside :nth-child(2) {
+    color: white;
+    background-color: black;
+    box-shadow: 20px 200px 200px 20px white;
+}
+
+aside :nth-child(3) {
+    color: white;
+    background-color: black;
+    box-shadow: 20px px 20px 20px white;
+}
+
+aside :nth-child(4) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(5) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(6) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(7) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(8) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(9) {
+    color: white;
+    background-color: black;
+}
+
+aside :nth-child(10) {
+    color: white;
+    background-color: black;
 }
 
 section {
