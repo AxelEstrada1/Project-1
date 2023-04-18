@@ -8,10 +8,14 @@ body {
 }
 
 header {
-    padding: 60px;
+    padding: 20px;
     text-align: center;
-    background: #13293d;
-    color: #fff;
+    color: #000000;
+    background-image: url("space.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
 }
 
 nav {
@@ -47,6 +51,13 @@ footer {
     background: #13293d;
     color: #fff;
 }
+
+.space-Title {
+    font-size: 5em;
+    color: white;
+}
+
+
 
 /* Image Placeholders */
 .image-box {
