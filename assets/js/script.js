@@ -1,8 +1,10 @@
+//Created elements 
 let planetImage = document.querySelector("#planet-image");
-let planetName = document.querySelector("#planet-name");
+let planetName = document.querySelector("#planet-Name");
 let planetBasicDetails = document.querySelector("#planet-basicDetails");
 let planetDescription = document.querySelector("#planet-description");
 let planetLink = document.querySelector("#planet-link");
+let mercuryButton = document.querySelector("#mercuryBtn")
 
 
 
@@ -38,9 +40,17 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
 
+
+//
+mercuryButton.addEventListener("click", () => {
+    showPlanetMercury(response);
+})
+
+// Calling the API DOM to html
 function showPlanetMercury(response) {
     console.log(response)
     planetImage.src = response[0].imgSrc.img;
-    planetName.textContent = `${response[0].name}`;
-    console.log(planetImage)
+    planetName.textContent = ` ${response[0].name}`;
+    planetBasicDetails.textContent = `${response[0].basicDetails.volume}`;
+    planetDescription.textContent = `${response[0].description}`;
 }

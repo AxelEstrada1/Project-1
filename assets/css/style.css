@@ -111,6 +111,11 @@ footer {
     color: white;
 }
 
+#planet-image {
+    display: flex;
+    max-width: 45%;
+    max-height: 45%;
+}
 
 
 /* Image Placeholders */
@@ -120,6 +125,11 @@ footer {
     padding: 20px;
     height: 100px;
     border: 1px solid black;
+}
+
+#planet-Name {
+    font-size: 30px;
+    text-align: center;
 }
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
