@@ -1,3 +1,11 @@
+let planetImage = document.querySelector("#planet-image");
+let planetName = document.querySelector("#planet-name");
+let planetBasicDetails = document.querySelector("#planet-basicDetails");
+let planetDescription = document.querySelector("#planet-description");
+let planetLink = document.querySelector("#planet-link");
+
+
+
 const options = {
     method: 'GET',
     headers: {
@@ -8,7 +16,10 @@ const options = {
 
 fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => {
+        console.log(response)
+        showPlanetMercury(response)
+    })
     .catch(err => console.error(err));
 
 // const options = {
@@ -26,3 +37,10 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
 // 	.then(response => response.json())
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
+
+function showPlanetMercury(response) {
+    console.log(response)
+    planetImage.src = response[0].imgSrc.img;
+    planetName.textContent = `${response[0].name}`;
+    console.log(planetImage)
+}
