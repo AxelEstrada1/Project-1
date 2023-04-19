@@ -133,16 +133,14 @@ fetch("https://openlibrary.org/search.json?q=neptune+planet&page=1")
     })
 
 
-// Calling the API DOM to html
+// Functions
 function showPlanetMercury() {
     console.log(planetsArr)
     console.log(planetsArr[0]);
     planetImage.src = planetsArr[0].imgSrc.img;
     planetName.textContent = ` ${planetsArr[0].name}`;
-    planetBasicDetails.textContent = `${planetsArr[0].basicDetails.volume}`;
+    planetBasicDetails.textContent = `Volume: ${planetsArr[0].basicDetails.volume}, Mass: ${planetsArr[0].basicDetails.mass}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
-    bookTitle.textContent = `${mecuryArray[0].title}`;
-    bookAuthor.textContent = `${mecuryArray[0].author_name}`;
 }
 
 function showPlanetVenus() {
