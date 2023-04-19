@@ -38,14 +38,15 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
 
 
 
-// Calling the API DOM to html
+// Functions
 function showPlanetMercury() {
     console.log(planetsArr)
     console.log(planetsArr[0]);
     planetImage.src = planetsArr[0].imgSrc.img;
     planetName.textContent = ` ${planetsArr[0].name}`;
-    planetBasicDetails.textContent = `${planetsArr[0].basicDetails.volume}`;
+    planetBasicDetails.textContent = `Volume: ${planetsArr[0].basicDetails.volume}, Mass: ${planetsArr[0].basicDetails.mass}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
+    planetLink.href = planetsArr[0].wikiLink;
 }
 
 function showPlanetVenus() {
