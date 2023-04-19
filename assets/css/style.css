@@ -111,6 +111,11 @@ footer {
     color: white;
 }
 
+#planet-image {
+    display: flex;
+    max-width: 45%;
+    max-height: 45%;
+}
 
 
 /* Image Placeholders */
@@ -122,14 +127,15 @@ footer {
     border: 1px solid black;
 }
 
+#planet-Name {
+    font-size: 30px;
+    text-align: center;
+}
+
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 
 /* Tablets - header changes color */
-@media screen and (max-width: 992px) {
-    header {
-        background: #772014;
-    }
-}
+@media screen and (max-width: 992px) {}
 
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
