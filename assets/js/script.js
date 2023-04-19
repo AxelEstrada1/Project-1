@@ -13,6 +13,8 @@ let saturnButton = document.querySelector("#saturnBtn");
 let uranusButton = document.querySelector("#uranusBtn");
 let neptuneButton = document.querySelector("#neptuneBtn");
 
+let bookTitle = document.querySelector("#book-title")
+
 
 
 
@@ -33,8 +35,15 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     })
     .catch(err => console.error(err));
 
-
-
+let venusArr = [];
+    fetch("https://openlibrary.org/search.json?q=venus+planet")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.docs[0].title);
+        console.log(data.docs[0].author_name[0]);
+        venusArr = data.docs;
+    })
 
 
 
@@ -46,6 +55,7 @@ function showPlanetMercury() {
     planetName.textContent = ` ${planetsArr[0].name}`;
     planetBasicDetails.textContent = `${planetsArr[0].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
+    bookTitle.textContent = `${venusArr[0].title}`;
 }
 
 function showPlanetVenus() {
@@ -119,4 +129,7 @@ jupiterButton.addEventListener("click", showPlanetJupiter);
 saturnButton.addEventListener("click", showPlanetSaturn);
 uranusButton.addEventListener("click", showPlanetUranus);
 neptuneButton.addEventListener("click", showPlanetNeptune);
+
+let buttonClick = document.getElementsByClassName('buttonCLicked')
+
 
