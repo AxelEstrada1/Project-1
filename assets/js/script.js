@@ -35,6 +35,7 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     .catch(err => console.error(err));
 
 
+
 async function setImage() {
 
     const img = await fetchImage('https://covers.openlibrary.org/b/id/12547191-L.jpg');
