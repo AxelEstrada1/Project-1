@@ -103,10 +103,11 @@ Deployed application: git@github.com:AxelEstrada1/Project-1.git
 Github repository:  https://github.com/AxelEstrada1/Project-1
 
 Team Member portfolios, with this project added to it:
-     Francisco Caldera:
-     Axel Estrada:
-     Joshua Gum:
+     Francisco Caldera: https://github.com/FCaldera15/Francisco-s-Portfolio
+     Axel Estrada: https://github.com/AxelEstrada1/EvenTicketOneScratchPortfolio
+     Joshua Gum: https://github.com/jgum63/Jgum_Portfolio
      Dawn Kline: https://dawn-kline-m.github.io/Portfolio/
+
 
 
 
