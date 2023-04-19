@@ -13,7 +13,8 @@ let saturnButton = document.querySelector("#saturnBtn");
 let uranusButton = document.querySelector("#uranusBtn");
 let neptuneButton = document.querySelector("#neptuneBtn");
 
-
+let bookTitle = document.querySelector("#book-title");
+let bookAuthor = document.querySelector("#book-author");
 
 
 
@@ -34,29 +35,6 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     .catch(err => console.error(err));
 
 
-// fetch('https://openai80.p.rapidapi.com/completions', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-// fetch('https://covers.openlibrary.org/b/id/12547191.json')
-//     .then(response => response.json())
-//     .then(libraryData => {
-
-//         console.log(libraryData);
-//     })
-
-
-setImage();
-async function fetchImage(url) {
-    const img = new Image();
-    return new Promise((res, rej) => {
-        img.onload = () => res(img);
-        img.onerror = e => rej(e);
-        img.src = url;
-    });
-}
-
 async function setImage() {
 
     const img = await fetchImage('https://covers.openlibrary.org/b/id/12547191-L.jpg');
@@ -66,31 +44,83 @@ async function setImage() {
     console.log(img)
 
 }
-// async function fetchImage(url) {
-//     const img = await new Image();
-//     return new Promise((res, rej) => {
-//         img.onload = () => res(img);
-//         img.onerror = e => rej(e);
-//         img.src = url;
-//     });
-// }
-// const img = fetchImage('https://covers.openlibrary.org/b/id/12547191-L.jpg');
-// console.log(img.url)
-// const w = img.width;
-// const h = img.height;
-// fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings ")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data);
-//     })
 
-fetch("https://openlibrary.org/search.json?q=jupiter ")
+
+let mercuryArray = []
+fetch("https://openlibrary.org/search.json?q=Mercury+planet&page=1")
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        console.log(data.docs);
+        mecuryArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
+let venusArray = []
+fetch("https://openlibrary.org/search.json?q=Venus+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        venusArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
+let earthArray = []
+fetch("https://openlibrary.org/search.json?q=earth+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        earthArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
+let marsArray = []
+fetch("https://openlibrary.org/search.json?q=mars+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        marsArray = data.docs;
+        //console.log(data.docs[0].title);
+
     })
 
+let jupiterArray = []
+fetch("https://openlibrary.org/search.json?q=jupiter+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        jupiterArray = data.docs;
+        //console.log(data.docs[0].title);
 
+    })
+
+let saturnArray = []
+fetch("https://openlibrary.org/search.json?q=saturn+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        saturnArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
+let uranusArray = []
+fetch("https://openlibrary.org/search.json?q=uranus+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        uranusArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
+
+let neptuneArray = []
+fetch("https://openlibrary.org/search.json?q=neptune+planet&page=1")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.docs);
+        neptuneArray = data.docs;
+        //console.log(data.docs[0].title);
+
+    })
 
 
 // Calling the API DOM to html
@@ -101,6 +131,8 @@ function showPlanetMercury() {
     planetName.textContent = ` ${planetsArr[0].name}`;
     planetBasicDetails.textContent = `${planetsArr[0].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
+    bookTitle.textContent = `${mecuryArray[0].title}`;
+    bookAuthor.textContent = `${mecuryArray[0].author_name}`;
 }
 
 function showPlanetVenus() {
@@ -110,6 +142,8 @@ function showPlanetVenus() {
     planetName.textContent = ` ${planetsArr[1].name}`;
     planetBasicDetails.textContent = `${planetsArr[1].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[1].description}`;
+    bookTitle.textContent = `${venusArray[0].title}`;
+    bookAuthor.textContent = `${venusArray[0].author_name}`;
 }
 
 function showPlanetEarth() {
@@ -119,6 +153,8 @@ function showPlanetEarth() {
     planetName.textContent = ` ${planetsArr[2].name}`;
     planetBasicDetails.textContent = `${planetsArr[2].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[2].description}`;
+    bookTitle.textContent = `${earthArray[0].title}`;
+    bookAuthor.textContent = `${earthArray[0].author_name}`;
 }
 
 function showPlanetMars() {
@@ -128,6 +164,8 @@ function showPlanetMars() {
     planetName.textContent = ` ${planetsArr[3].name}`;
     planetBasicDetails.textContent = `${planetsArr[3].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[3].description}`;
+    bookTitle.textContent = `${marsArray[0].title}`;
+    bookAuthor.textContent = `${marsArray[0].author_name}`;
 }
 
 function showPlanetJupiter() {
@@ -137,6 +175,8 @@ function showPlanetJupiter() {
     planetName.textContent = ` ${planetsArr[4].name}`;
     planetBasicDetails.textContent = `${planetsArr[4].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[4].description}`;
+    bookTitle.textContent = `${jupiterArray[0].title}`;
+    bookAuthor.textContent = `${jupiterArray[0].author_name}`;
 }
 
 function showPlanetSaturn() {
@@ -146,6 +186,8 @@ function showPlanetSaturn() {
     planetName.textContent = ` ${planetsArr[5].name}`;
     planetBasicDetails.textContent = `${planetsArr[5].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[5].description}`;
+    bookTitle.textContent = `${saturnArray[0].title}`;
+    bookAuthor.textContent = `${saturnArray[0].author_name}`;
 }
 
 function showPlanetUranus() {
@@ -155,6 +197,8 @@ function showPlanetUranus() {
     planetName.textContent = ` ${planetsArr[6].name}`;
     planetBasicDetails.textContent = `${planetsArr[6].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[6].description}`;
+    bookTitle.textContent = `${uranusArray[0].title}`;
+    bookAuthor.textContent = `${uranusArray[0].author_name}`;
 }
 
 function showPlanetNeptune() {
@@ -164,6 +208,8 @@ function showPlanetNeptune() {
     planetName.textContent = ` ${planetsArr[7].name}`;
     planetBasicDetails.textContent = `${planetsArr[7].basicDetails.volume}`;
     planetDescription.textContent = `${planetsArr[7].description}`;
+    bookTitle.textContent = `${neptuneArray[0].title}`;
+    bookAuthor.textContent = `${neptuneArray[0].author_name}`;
 }
 
 mercuryButton.addEventListener("click", showPlanetMercury);
