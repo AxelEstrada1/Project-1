@@ -132,12 +132,6 @@ function showPlanetMercury() {
     planetName.textContent = ` ${planetsArr[0].name}`;
     planetBasicDetails.textContent = `Volume: ${planetsArr[0].basicDetails.volume}, Mass: ${planetsArr[0].basicDetails.mass}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
-<<<<<<< HEAD
-    planetLink.href = planetsArr[0].wikiLink;
-=======
-    bookTitle.textContent = `${mecuryArray[0].title}`;
-    bookAuthor.textContent = `${mecuryArray[0].author_name}`;
->>>>>>> e34776e8823125a97a0c9826774c525facfc7b70
 }
 
 function showPlanetVenus() {
