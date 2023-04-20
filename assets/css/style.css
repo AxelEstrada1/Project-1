@@ -55,21 +55,21 @@ aside :nth-child(3) {
     background-color: rgba(0, 0, 0, 0.53);
     display: grid;
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #FFAE50;
 }
 
 aside :nth-child(4) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #7CC0FF;
 }
 
 aside :nth-child(5) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #FF7425;
 }
 
 aside :nth-child(6) {
@@ -83,28 +83,28 @@ aside :nth-child(7) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #BD5B00;
 }
 
 aside :nth-child(8) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #BD9B72;
 }
 
 aside :nth-child(9) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #00D1FF;
 }
 
 aside :nth-child(10) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
+    box-shadow: 0px 0px 15px 0px #000AFF;
 }
 
 section {
@@ -133,8 +133,39 @@ footer {
     max-height: 45%;
 }
 
+.planet-section {
+    background-color: rgb(0, 0, 0);
+}
 
+#planet-Name {
+    color: white;
+}
 
+#planet-description {
+    color: white;
+    font-size: 22px;
+}
+
+#planet-basicDetails {
+    color: white;
+    font-size: 20px;
+}
+
+#book-head {
+    color: white;
+}
+
+#book-title {
+    color: white;
+}
+
+#book-author {
+    color: white;
+}
+
+#planet-Link {
+    color: white;
+}
 
 /* Image Placeholders */
 .image-box {
@@ -148,6 +179,18 @@ footer {
 #planet-Name {
     font-size: 30px;
     text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+footer {
+    background-image: url(/assets/images/space.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
 }
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
