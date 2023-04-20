@@ -16,8 +16,122 @@ let neptuneButton = document.querySelector("#neptuneBtn");
 let bookTitle = document.querySelector("#book-title");
 let bookAuthor = document.querySelector("#book-author");
 
+let planetClk = document.getElementById("planetClk");
 
+function planetExists(planet) {
+  return planetClk.innerHTML.includes(planet);
+}
 
+let mercuryBtn = document.getElementById("mercuryBtn");
+mercuryBtn.addEventListener("click", () => {
+  if (!planetExists("Mercury")){
+    localStorage.setItem("Mercury", true);
+    planetClk.innerHTML += "Mercury, ";
+  }
+});
+
+if (localStorage.getItem("Mercury") === "true") {
+  if (!planetExists("Mercury")){
+    planetClk.innerHTML += "Mercury, ";
+  }
+}
+
+let venusBtn = document.getElementById("venusBtn");
+venusBtn.addEventListener("click", () => {
+  if (!planetExists("Venus")){
+    localStorage.setItem("Venus", true);
+    planetClk.innerHTML += "Venus, ";
+  }
+});
+
+if (localStorage.getItem("Venus") === "true") {
+  if (!planetExists("Venus")){
+    planetClk.innerHTML += "Venus, ";
+  }
+}
+
+let earthBtn = document.getElementById("earthBtn");
+earthBtn.addEventListener("click", () => {
+  if (!planetExists("Earth")){
+    localStorage.setItem("Earth", true);
+    planetClk.innerHTML += "Earth, ";
+  }
+});
+
+if (localStorage.getItem("Earth") === "true") {
+  if (!planetExists("Earth")){
+    planetClk.innerHTML += "Earth, ";
+  }
+}
+
+let marsBtn = document.getElementById("marsBtn");
+marsBtn.addEventListener("click", () => {
+  if (!planetExists("Mars")){
+    localStorage.setItem("Mars", true);
+    planetClk.innerHTML += "Mars, ";
+  }
+});
+
+if (localStorage.getItem("Mars") === "true") {
+  if (!planetExists("Mars")){
+    planetClk.innerHTML += "Mars, ";
+  }
+}
+
+let jupiterBtn = document.getElementById("jupiterBtn");
+jupiterBtn.addEventListener("click", () => {
+  if (!planetExists("Jupiter")){
+    localStorage.setItem("Jupiter", true);
+    planetClk.innerHTML += "Jupiter, ";
+  }
+});
+
+if (localStorage.getItem("Jupiter") === "true") {
+  if (!planetExists("Jupiter")){
+    planetClk.innerHTML += "Jupiter, ";
+  }
+}
+
+let saturnBtn = document.getElementById("saturnBtn");
+saturnBtn.addEventListener("click", () => {
+  if (!planetExists("Saturn")){
+    localStorage.setItem("Saturn", true);
+    planetClk.innerHTML += "Saturn, ";
+  }
+});
+
+if (localStorage.getItem("Saturn") === "true") {
+  if (!planetExists("Saturn")){
+    planetClk.innerHTML += "Saturn, ";
+  }
+}
+let uranusBtn = document.getElementById("uranusBtn");
+uranusBtn.addEventListener("click", () => {
+  if (!planetExists("Uranus")){
+    localStorage.setItem("Uranus", true);
+    planetClk.innerHTML += "Uranus, ";
+  }
+});
+
+if (localStorage.getItem("Uranus") === "true") {
+  if (!planetExists("Uranus")){
+    planetClk.innerHTML += "Uranus, ";
+  }
+}
+
+let neptuneBtn = document.getElementById("neptuneBtn");
+neptuneBtn.addEventListener("click", () => {
+  if (!planetExists("Neptune")){
+    localStorage.setItem("Neptune", true);
+    planetClk.innerHTML += "Neptune ";
+  }
+});
+
+if (localStorage.getItem("Neptune") === "true") {
+  if (!planetExists("Neptune")){
+    planetClk.innerHTML += "Neptune ";
+  }
+}
 const options = {
     method: 'GET',
     headers: {
@@ -34,17 +148,6 @@ fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
     })
     .catch(err => console.error(err));
 
-
-
-async function setImage() {
-
-    const img = await fetchImage('https://covers.openlibrary.org/b/id/12547191-L.jpg');
-    const w = img.width;
-    const h = img.height;
-    document.body.appendChild(img)
-    console.log(img)
-
-}
 let venusArr = [];
     fetch("https://openlibrary.org/search.json?q=venus+planet")
     .then(response => response.json())
@@ -61,7 +164,7 @@ fetch("https://openlibrary.org/search.json?q=Mercury+planet&page=1")
     .then(response => response.json())
     .then(data => {
         console.log(data.docs);
-        mecuryArray = data.docs;
+        mercuryArray = data.docs;
         //console.log(data.docs[0].title);
 
     })
@@ -141,6 +244,8 @@ function showPlanetMercury() {
     planetName.textContent = ` ${planetsArr[0].name}`;
     planetBasicDetails.textContent = `Volume: ${planetsArr[0].basicDetails.volume}, Mass: ${planetsArr[0].basicDetails.mass}`;
     planetDescription.textContent = `${planetsArr[0].description}`;
+    bookTitle.textContent = mercuryArray[0].title;
+    bookAuthor.textContent = mercuryArray[0].author_name;
 }
 
 function showPlanetVenus() {
@@ -229,6 +334,21 @@ saturnButton.addEventListener("click", showPlanetSaturn);
 uranusButton.addEventListener("click", showPlanetUranus);
 neptuneButton.addEventListener("click", showPlanetNeptune);
 
-let buttonClick = document.getElementsByClassName('buttonCLicked')
 
+let modal = document.querySelector(".modal");
+let overlay = document.querySelector(".overlay");
+let modalOpenBtn = document.querySelector(".btn-open");
+let modalCloseBtn = document.querySelector(".btn-close");
 
+let modalOpen = function() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+let modalClose = function() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+modalOpenBtn.addEventListener("click", modalOpen);
+modalCloseBtn.addEventListener("click", modalClose);
