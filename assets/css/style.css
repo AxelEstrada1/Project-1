@@ -1,12 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial;
     margin: 0;
 }
-
 header {
     padding: 20px;
     text-align: center;
@@ -17,11 +15,9 @@ header {
     position: relative;
     background-size: cover;
 }
-
 main {
     display: flex;
 }
-
 aside {
     flex: 30%;
     background-image: url(/assets/images/space.avif);
@@ -34,12 +30,10 @@ aside {
     grid-auto-rows: 50px;
     grid-template-columns: 1fr;
 }
-
 aside h2 {
     text-align: center;
     color: white;
 }
-
 aside :nth-child(2) {
     padding-top: 15px;
     color: white;
@@ -48,7 +42,6 @@ aside :nth-child(2) {
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #fff;
 }
-
 aside :nth-child(3) {
     padding-top: 15px;
     color: white;
@@ -57,74 +50,63 @@ aside :nth-child(3) {
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #FFAE50;
 }
-
 aside :nth-child(4) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #7CC0FF;
 }
-
 aside :nth-child(5) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #FF7425;
 }
-
 aside :nth-child(6) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #fff;
 }
-
 aside :nth-child(7) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #BD5B00;
 }
-
 aside :nth-child(8) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #BD9B72;
 }
-
 aside :nth-child(9) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #00D1FF;
 }
-
 aside :nth-child(10) {
     color: white;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 7px;
     box-shadow: 0px 0px 15px 0px #000AFF;
 }
-
 section {
     flex: 70%;
     background-color: #fff;
     padding: 20px;
 }
-
 footer {
     padding: 20px;
     text-align: center;
-    background: #13293d;
+    background: #13293D;
     color: #fff;
 }
-
 .space-Title {
     font-size: 5em;
     color: white;
 }
-
 #planet-image {
     display: block;
     margin-left: auto;
@@ -132,41 +114,32 @@ footer {
     max-width: 45%;
     max-height: 45%;
 }
-
 .planet-section {
     background-color: rgb(0, 0, 0);
 }
-
 #planet-Name {
     color: white;
 }
-
 #planet-description {
     color: white;
     font-size: 22px;
 }
-
 #planet-basicDetails {
     color: white;
     font-size: 20px;
 }
-
 #book-head {
     color: white;
 }
-
 #book-title {
     color: white;
 }
-
 #book-author {
     color: white;
 }
-
 #planet-Link {
     color: white;
 }
-
 /* Image Placeholders */
 .image-box {
     background-color: #fff;
@@ -175,295 +148,19 @@ footer {
     height: 100px;
     border: 1px solid black;
 }
-
 #planet-Name {
     font-size: 30px;
     text-align: center;
 }
-
 h2 {
     color: white;
 }
-
 footer {
     background-image: url(/assets/images/space.avif);
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-}
-
-/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
-
-/* Tablets - header changes color */
-
-@media screen and (max-width: 992px) {
-    header {
-        padding: 20px;
-        text-align: center;
-        color: #000000;
-        background-image: url(/assets/images/space.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        background-size: cover;
-    }
-
-    aside {
-        display: grid;
-        row-gap: 30px;
-    }
-}
-
-/*COMMENT Large smartphones - navbar changes color COMMENT */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 20px;
-        text-align: center;
-        color: #000000;
-        background-image: url(/assets/images/space.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        background-size: cover;
-    }
-
-    main {
-        display: block;
-    }
-
-    aside h2 {
-        display: inline-block;
-    }
-
-    aside {
-        flex: 30%;
-        background-image: url(/assets/images/space.avif);
-        padding: 20px;
-        background-position: center;
-        background-size: cover;
-        flex-wrap: wrap;
-        display: grid;
-        row-gap: 15px;
-        column-gap: 15px;
-        grid-auto-rows: 50px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "header header header"
-            "button button button"
-            "button button button"
-            "button button button"
-        ;
-    }
-
-    aside h2 {
-        grid-area: header;
-    }
-
-    aside button1 {
-        grid-area: button;
-    }
-}
-
-/* Small smartphones - image placeholders change color */
-
-@media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-        text-align: center;
-        color: #000000;
-        background-image: url(/assets/images/space.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        background-size: cover;
-    }
-
-    main {
-        display: block;
-    }
-
-    aside h2 {
-        display: inline-block;
-    }
-
-    aside {
-        flex: 30%;
-        background-image: url(/assets/images/space.avif);
-        padding: 20px;
-        background-position: center;
-        background-size: cover;
-        flex-wrap: wrap;
-        display: grid;
-        row-gap: 15px;
-        column-gap: 15px;
-        grid-auto-rows: 50px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "header header header"
-            "button button button"
-            "button button button"
-            "button button button"
-        ;
-    }
-
-    aside h2 {
-        grid-area: header;
-    }
-
-    aside button1 {
-        grid-area: button;
-    }
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial;
-    margin: 0;
-}
-
-header {
-    padding: 20px;
-    text-align: center;
-    color: #000000;
-    background-image: url(/assets/images/space.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-}
-
-main {
-    display: flex;
-}
-
-aside {
-    flex: 30%;
-    background-image: url(/assets/images/space.avif);
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    flex-wrap: wrap;
-    display: grid;
-    row-gap: 15px;
-    grid-auto-rows: 50px;
-    grid-template-columns: 1fr;
-}
-
-aside h2 {
-    text-align: center;
-    color: white;
-}
-
-aside :nth-child(2) {
-    padding-top: 15px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    display: grid;
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(3) {
-    padding-top: 15px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    display: grid;
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(4) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(5) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(6) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(7) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(8) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(9) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-aside :nth-child(10) {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #fff;
-}
-
-section {
-    flex: 70%;
-    background-color: #fff;
-    padding: 20px;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-    background: #13293d;
-    color: #fff;
-}
-
-.space-Title {
-    font-size: 5em;
-    color: white;
-}
-
-#planet-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 45%;
-    max-height: 45%;
-}
-
-
-
-
-/* Image Placeholders */
-.image-box {
-    background-color: #fff;
-    width: 100%;
-    padding: 20px;
-    height: 100px;
-    border: 1px solid black;
-}
-
-#planet-Name {
-    font-size: 30px;
-    text-align: center;
 }
 
 .modal {
@@ -472,11 +169,9 @@ footer {
     left: 40%;
     z-index: 2;
 }
-
 .hidden {
     display: none;
 }
-
 .overlay {
     position: fixed;
     top: 0;
@@ -488,12 +183,10 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     z-index: 1;
-  }
+}
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
-
 /* Tablets - header changes color */
-
 @media screen and (max-width: 992px) {
     header {
         padding: 20px;
@@ -505,13 +198,11 @@ footer {
         position: relative;
         background-size: cover;
     }
-
     aside {
         display: grid;
         row-gap: 30px;
     }
 }
-
 /*COMMENT Large smartphones - navbar changes color COMMENT */
 @media screen and (max-width: 768px) {
     header {
@@ -524,15 +215,12 @@ footer {
         position: relative;
         background-size: cover;
     }
-
     main {
         display: block;
     }
-
     aside h2 {
         display: inline-block;
     }
-
     aside {
         flex: 30%;
         background-image: url(/assets/images/space.avif);
@@ -552,18 +240,14 @@ footer {
             "button button button"
         ;
     }
-
     aside h2 {
         grid-area: header;
     }
-
     aside button1 {
         grid-area: button;
     }
 }
-
 /* Small smartphones - image placeholders change color */
-
 @media screen and (max-width: 576px) {
     header {
         padding: 20px;
@@ -575,15 +259,12 @@ footer {
         position: relative;
         background-size: cover;
     }
-
     main {
         display: block;
     }
-
     aside h2 {
         display: inline-block;
     }
-
     aside {
         flex: 30%;
         background-image: url(/assets/images/space.avif);
@@ -603,13 +284,10 @@ footer {
             "button button button"
         ;
     }
-
     aside h2 {
         grid-area: header;
     }
-
     aside button1 {
         grid-area: button;
     }
-
 }
