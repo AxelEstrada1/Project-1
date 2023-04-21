@@ -288,6 +288,13 @@ footer {
     }
 }
 
+header .btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 7px;
+    box-shadow: 0px 0px 15px 0px #FFFFFF;
+}
+
 /* Small smartphones - image placeholders change color */
 @media screen and (max-width: 576px) {
     header {
