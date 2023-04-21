@@ -49,7 +49,8 @@ Links to the deployed application and the GitHub repository.
 
 ## Appearance 
 
-This is a snapshot of our project: (TBD)
+This is a snapshot of our project: 
+![alt text](/assets/images/Screenshot%20(12).png)
 ( Note: to be expanded upon: Concept 10%
 Application should be a unique and novel idea.
 
@@ -98,7 +99,7 @@ Each member of your group is required to submit the following for review:)
 ## URLs:
 
 Project-1: 
-Deployed application: git@github.com:AxelEstrada1/Project-1.git
+Deployed application: https://axelestrada1.github.io/Project-1/
 
 Github repository:  https://github.com/AxelEstrada1/Project-1
 
