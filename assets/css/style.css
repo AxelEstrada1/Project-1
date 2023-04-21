@@ -7,11 +7,12 @@ body {
     margin: 0;
 }
 
+
 header {
     padding: 20px;
     text-align: center;
     color: #000000;
-    background-image: url(./assets/images/space.avif);
+    background-image: url(/assets/images/space.avif);
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -24,7 +25,7 @@ main {
 
 aside {
     flex: 30%;
-    background-image: url(./assets/images/space.avif);
+    background-image: url(/assets/images/space.avif);
     padding: 20px;
     background-position: center;
     background-size: cover;
@@ -186,7 +187,7 @@ h2 {
 }
 
 footer {
-    background-image: url(./assets/images/space.avif);
+    background-image: url(/assets/images/space.avif);
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -217,13 +218,6 @@ footer {
     z-index: 1;
 }
 
-header .btn {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #ffffff;
-}
-
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
@@ -231,7 +225,7 @@ header .btn {
         padding: 20px;
         text-align: center;
         color: #000000;
-        background-image: url(./assets/images/space.avif);
+        background-image: url(/assets/images/space.avif);
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
@@ -250,7 +244,7 @@ header .btn {
         padding: 20px;
         text-align: center;
         color: #000000;
-        background-image: url(./assets/images/space.avif);
+        background-image: url(/assets/images/space.avif);
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
@@ -267,7 +261,7 @@ header .btn {
 
     aside {
         flex: 30%;
-        background-image: url(./assets/images/space.avif);
+        background-image: url(/assets/images/space.avif);
         padding: 20px;
         background-position: center;
         background-size: cover;
@@ -300,7 +294,7 @@ header .btn {
         padding: 20px;
         text-align: center;
         color: #000000;
-        background-image: url(./assets/images/space.avif);
+        background-image: url(/assets/images/space.avif);
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
@@ -317,7 +311,7 @@ header .btn {
 
     aside {
         flex: 30%;
-        background-image: url(./assets/images/space.avif);
+        background-image: url(/assets/images/space.avif);
         padding: 20px;
         background-position: center;
         background-size: cover;
