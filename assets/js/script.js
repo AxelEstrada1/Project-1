@@ -12,7 +12,7 @@ let jupiterButton = document.querySelector("#jupiterBtn");
 let saturnButton = document.querySelector("#saturnBtn");
 let uranusButton = document.querySelector("#uranusBtn");
 let neptuneButton = document.querySelector("#neptuneBtn");
-let asteroidBeltButton = document.querySelector("#asteroidBtn")
+let asteroidBeltButton = document.querySelector("#asteroidBtn");
 
 let bookTitle = document.querySelector("#book-title");
 let bookAuthor = document.querySelector("#book-author");
