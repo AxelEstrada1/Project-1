@@ -7,6 +7,7 @@ body {
     margin: 0;
 }
 
+
 header {
     padding: 20px;
     text-align: center;
@@ -217,13 +218,6 @@ footer {
     z-index: 1;
 }
 
-header .btn {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.53);
-    border-radius: 7px;
-    box-shadow: 0px 0px 15px 0px #ffffff;
-}
-
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
@@ -292,6 +286,13 @@ header .btn {
     aside button1 {
         grid-area: button;
     }
+}
+
+header .btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 7px;
+    box-shadow: 0px 0px 15px 0px #FFFFFF;
 }
 
 /* Small smartphones - image placeholders change color */
